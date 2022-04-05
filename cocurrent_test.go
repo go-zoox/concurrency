@@ -17,9 +17,9 @@ func TestCocurrent(t *testing.T) {
 			fmt.Println("task", index, time.Now())
 			time.Sleep(3 * time.Second)
 
-			if index == 0 {
-				panic("panic error for task 0")
-			}
+			// if index == 0 {
+			// 	panic("panic error for task 0")
+			// }
 
 			// panic(fmt.Sprintf("%d", index))
 			// c.Done()
