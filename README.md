@@ -40,5 +40,10 @@ func TestCocurrent(t *testing.T) {
 ## Inspired by
 * [eddycjy/gsema](https://github.com/eddycjy/gsema) - a simple goroutine limit pool.
 
+## Related
+* [go-zoox/waitgroup](https://github.com/go-zoox/waitgroup) - Parallel-Controlled WaitGroup
+* [go-zoox/jobqueue](https://github.com/go-zoox/jobqueue) - Powerful unlimited job queue with goroutine pool
+* [go-zoox/promise](https://github.com/go-zoox/promise) - JavaScript Promise Like with Goroutines
+
 ## License
 GoZoox is released under the [MIT License](./LICENSE).
