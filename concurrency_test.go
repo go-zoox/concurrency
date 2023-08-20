@@ -1,4 +1,4 @@
-package cocurrent
+package concurrency
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func TestCocurrent(t *testing.T) {
+func TestConcurrency(t *testing.T) {
 	c := New(2)
 
 	for i := 0; i < 4; i++ {

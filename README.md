@@ -1,22 +1,22 @@
-# Cocurrent - A Simple Goroutine Limit Pool
+# Concurrency - A Simple Goroutine Limit Pool
 
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/go-zoox/cocurrent)](https://pkg.go.dev/github.com/go-zoox/cocurrent)
-[![Build Status](https://github.com/go-zoox/cocurrent/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/go-zoox/cocurrent/actions/workflows/ci.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/go-zoox/cocurrent)](https://goreportcard.com/report/github.com/go-zoox/cocurrent)
-[![Coverage Status](https://coveralls.io/repos/github/go-zoox/cocurrent/badge.svg?branch=master)](https://coveralls.io/github/go-zoox/cocurrent?branch=master)
-[![GitHub issues](https://img.shields.io/github/issues/go-zoox/cocurrent.svg)](https://github.com/go-zoox/cocurrent/issues)
-[![Release](https://img.shields.io/github/tag/go-zoox/cocurrent.svg?label=Release)](https://github.com/go-zoox/cocurrent/tags)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/go-zoox/concurrency)](https://pkg.go.dev/github.com/go-zoox/concurrency)
+[![Build Status](https://github.com/go-zoox/concurrency/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/go-zoox/concurrency/actions/workflows/ci.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/go-zoox/concurrency)](https://goreportcard.com/report/github.com/go-zoox/concurrency)
+[![Coverage Status](https://coveralls.io/repos/github/go-zoox/concurrency/badge.svg?branch=master)](https://coveralls.io/github/go-zoox/concurrency?branch=master)
+[![GitHub issues](https://img.shields.io/github/issues/go-zoox/concurrency.svg)](https://github.com/go-zoox/concurrency/issues)
+[![Release](https://img.shields.io/github/tag/go-zoox/concurrency.svg?label=Release)](https://github.com/go-zoox/concurrency/tags)
 
 ## Installation
 To install the package, run:
 ```bash
-go get github.com/go-zoox/cocurrent
+go get github.com/go-zoox/concurrency
 ```
 
 ## Getting Started
 
 ```go
-func TestCocurrent(t *testing.T) {
+func TestConcurrency(t *testing.T) {
 	c := New(2)
 
 	for i := 0; i < 4; i++ {

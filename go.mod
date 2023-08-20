@@ -1,3 +1,3 @@
-module github.com/go-zoox/cocurrent
+module github.com/go-zoox/concurrency
 
-go 1.17
+go 1.18

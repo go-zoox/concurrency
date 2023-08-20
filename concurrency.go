@@ -1,4 +1,4 @@
-package cocurrent
+package concurrency
 
 import (
 	"log"
@@ -6,22 +6,22 @@ import (
 	"time"
 )
 
-// Cocurrent is a concurrent object
-type Cocurrent struct {
+// Concurrency is a concurrent object
+type Concurrency struct {
 	ch chan struct{}
 	wg *sync.WaitGroup
 }
 
-// New creates a new cocurrent object
-func New(limit int) *Cocurrent {
-	return &Cocurrent{
+// New creates a new concurrency object
+func New(limit int) *Concurrency {
+	return &Concurrency{
 		ch: make(chan struct{}, limit),
 		wg: new(sync.WaitGroup),
 	}
 }
 
-// Add adds a new task to the cocurrent object
-func (c *Cocurrent) Add(task func(args ...interface{}), args ...interface{}) {
+// Add adds a new task to the concurrency object
+func (c *Concurrency) Add(task func(args ...interface{}), args ...interface{}) {
 	c.wg.Add(1)
 	c.ch <- struct{}{}
 
@@ -41,13 +41,13 @@ func (c *Cocurrent) Add(task func(args ...interface{}), args ...interface{}) {
 	}()
 }
 
-// Done removes a task from the cocurrent object
-func (c *Cocurrent) Done() {
+// Done removes a task from the concurrency object
+func (c *Concurrency) Done() {
 	<-c.ch
 	c.wg.Done()
 }
 
 // Wait waits for all tasks to be done
-func (c *Cocurrent) Wait() {
+func (c *Concurrency) Wait() {
 	c.wg.Wait()
 }
